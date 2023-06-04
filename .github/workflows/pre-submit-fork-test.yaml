@@ -1,0 +1,31 @@
+name: Students Presubmit Fork Tests
+on:
+  push:
+    branches:
+      - main
+jobs:
+  QuestionsTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: test branches question
+        run: |
+          git checkout main
+          cd test
+          bash branches.sh
+      - name: test conflict question
+        run: |
+          git checkout main
+          cd test
+          bash conflict.sh
+      - name: test sensitive data question
+        run: |
+          git checkout main
+          bash test/sensitive_data.sh
+      - name: test merge repos question
+        run: |
+          git checkout main
+          cd test
+          bash merge_repos.sh
+          
+          
