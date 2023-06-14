@@ -210,6 +210,6 @@ cd test
 bash merge_repos.sh
 ```
 
-# Gook Luck
+# Gook Luck!
 
 
