@@ -15,16 +15,18 @@ then
   exit 1
 fi
 
-git checkout $(git branch --contains $C)
+git checkout feature/upgrade_angular_version
 files=("some_file" "some_other_file" "some_file2" "some_other_file2")
 
 for file in "${files[@]}"; do
   if [[ ! -f "$file" ]]; then
     echo "File $file expected to be found in the branch"
+    exit 1
   fi
 
   if [[ "$(echo $file | md5sum | cut -d' ' -f1)" != "$(cat $file)" ]]; then
     echo "The content of $file has changed comparing to the original file"
+    exit 1
   fi
 done
 
