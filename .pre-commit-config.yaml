@@ -3,3 +3,4 @@ repos:
     rev: v4.4.0
     hooks:
     -   id: detect-aws-credentials
+        args: [--allow-missing-credentials]
