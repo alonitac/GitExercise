@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Git Exercise
 
 ## Guidelines
@@ -213,3 +214,6 @@ bash merge_repos.sh
 # Gook Luck
 
 
+=======
+# GitExerciseOther
+>>>>>>> serviceB
