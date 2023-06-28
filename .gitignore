@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+git-sim_media/
+git-sim_media/
