@@ -7,7 +7,7 @@ then
   echo "Vulnerable commit found in your repo: $VUL_COMMIT"
   exit 1
 fi
-
+######
 C=$(cat test/vul_hash-1)
 if [ "$( git cat-file -t $C)" != "commit" ]
 then
