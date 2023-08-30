@@ -32,6 +32,9 @@ def contact():
 def contact():
     return "You can chat with live agent!"
 
+@app.route("/internal")
+def home():
+    return "System management portal"
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080, host="0.0.0.0")
